@@ -11,6 +11,7 @@ import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 
+@Deprecated
 public class ResettableStreamRequestWrapper extends HttpServletRequestWrapper {
   private final String body;
 
