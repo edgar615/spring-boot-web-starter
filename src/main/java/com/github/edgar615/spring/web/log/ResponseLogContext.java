@@ -16,6 +16,8 @@ public class ResponseLogContext implements LogContext {
 
     private String id;
 
+    private int status;
+
     private String body;
 
     private Map<String, Object> header;
@@ -58,6 +60,14 @@ public class ResponseLogContext implements LogContext {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public String getBody() {

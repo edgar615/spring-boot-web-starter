@@ -1,5 +1,8 @@
 package com.github.edgar615.spring.web.log;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Request
  *
@@ -24,6 +27,19 @@ package com.github.edgar615.spring.web.log;
  * {"value":"Hello world!"}
  * </pre>
  */
-public class HttpWebLoggerFormatter {
+public class HttpWebLoggerFormatter implements WebLoggerFormatter {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestLoggerFilter.class);
+
+    @Override
+    public void logRequest(RequestLogContext requestLogContext) {
+        LOGGER.info("Incoming Request: {}\n" +
+                "{} {}", requestLogContext.getId(),
+                requestLogContext.getMethod(), requestLogContext.getUri());
+    }
+
+    @Override
+    public void logResponse(ResponseLogContext responseLogContext) {
+
+    }
 }
