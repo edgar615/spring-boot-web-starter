@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: web
+web:
+  correlation: uuid
+  error:
+    1000: 404
+  logConfig:
+    showTrace: false
+    showErrorStackTrace: false
+  interceptors:
+    SimpleAuthInterceptor:
+      exclude:
+      - /auth/login
+      - /static/*
+      - /images/*
+    AuthInterceptor:
+      exclude:
+      - /auth/login
+      - /static/*
+      - /images/*
