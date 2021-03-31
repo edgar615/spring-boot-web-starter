@@ -23,7 +23,7 @@
         <spring.version>5.0.5.RELEASE</spring.version>
         <org.aspectj.version>1.7.2</org.aspectj.version>
         <aspectjweaver.version>1.8.6</aspectjweaver.version>
-        <guava.version>26.0-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <slf4j.version>1.7.14</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <util.version>1.2.0</util.version>
